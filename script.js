@@ -78,7 +78,8 @@ Complete the exercise in the space below:
 
 
 function generateEmail(name, domain){
-
+const email = name+"@"+domain 
+return email 
 }
 
 
@@ -87,6 +88,137 @@ console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
 
 
+/*
+Exercise 5: greetUser()
+
+Define a function called greetUser. It should take a name and a time of day (morning, afternoon, evening) and return a personalized greeting.
+
+Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
+
+Complete the exercise in the space below:
+*/
 
 
+
+
+function greetUser(name, time){
+  // let greeting = "good " + time + " " + name
+  const greeting = `Good ${time} ${name}.`
+  return greeting
+}
+console.log('Exercise 5 Result:', greetUser("Marcos", "Afternoon"));
+
+
+
+
+
+/*
+Exercise 6: reverseString()
+
+Define a function called reverseString. It should take a string and return it with its characters in reverse order. 
+
+Example: reverseString('rockstar') should return the string "ratskcor".
+
+Complete the exercise in the space below:
+*/
+
+function reverseString(str){
+ return str.split("").reverse().join("");
+  
+}
+
+console.log('Exercise 6 Result:', reverseString("rockstar"));
+
+
+/*
+Exercise 7: checkPalindrome()
+
+Define a function called checkPalindrome. It should take a string and return true if the string is a palindrome (reads the same forwards and backwards) and false otherwise.
+
+Example: checkPalindrome('radar') should return true.
+Example: checkPalindrome('taco') should return false.
+
+Complete the exercise in the space below:
+*/
+
+function checkPalindrome(str){
+const reverse = str.split("").reverse().join("")
+if (str===reverse) {
+  //  block of code to be executed if the condition is true
+  return true
+  
+}else{
+ return false
+}
+}
+
+console.log('Exercise 7 Result:', checkPalindrome("taco"));
+
+
+/*
+Exercise 8: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+
+function maxOfThree(num1, num2, num3){
+if (num1 >= num2 && num1>=num3) {
+return num1
+} else if (num2>= num1 && num2>=num3) {
+return num2
+} else {
+return num3
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+}
+
+console.log('Exercise 8 Result:', maxOfThree(5, 10, 88));
+
+/*
+Exercise 9: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: the bill amount and the tip percentage (as a whole number). The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+function calculateTip(bill, tip){
+  return bill*tip/100
+
+}
+
+
+console.log('Exercise 9 Result:', calculateTip(50, 20));
+
+
+
+/*
+Exercise 10: convertTemperature()
+
+Write a function named convertTemperature. It takes two arguments: a temperature and a string representing the scale ('C' for Celsius, 'F' for Fahrenheit). Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(temp, scale){
+  if (scale==="C"){
+    const Ftemp= temp*9/5+32
+    return Ftemp 
+  }else if(scale==="F"){
+const Ctemp= (temp-32)*5/9
+return Ctemp
+  }else{
+    return "invalid please try again"
+  }
+}
+
+console.log('Exercise 10 Result:', convertTemperature(32, "P"));
 
